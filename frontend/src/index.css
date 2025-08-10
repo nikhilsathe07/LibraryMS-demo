@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skeleton {
+  height: 100px;
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  animation: shimmer 1.2s infinite;
+}
+
+body {
+  background-color: #F9FAFB;
+  font-family: 'Inter', sans-serif;
+}
+
+/* @keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+} */
+
+
+/* Base styling */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans tracking-normal leading-relaxed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors;
+  }
+}
+
+/* Components styling */
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-5 py-2 rounded-xl shadow-soft hover:bg-primary-700 hover:shadow-hover transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-5 py-2 rounded-xl hover:bg-gray-300 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-soft border border-gray-200 p-4 hover:shadow-hover hover:scale-[1.01] transition-transform duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition duration-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
