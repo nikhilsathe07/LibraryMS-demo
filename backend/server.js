@@ -32,6 +32,7 @@ app.use("/api/admin", adminRoutes);
 app.get("/api/health", (req, res) => {
   res.json({ message: "Library Management API is running!" });
 });
+// Serve static files in production
 
 // Error handler
 app.use(errorHandler);
