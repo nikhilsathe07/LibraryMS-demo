@@ -1,5 +1,5 @@
 import React from 'react'
-import { BookOpen, Mail, Phone, MapPin } from 'lucide-react'
+import { BookOpen, Mail, Phone, MapPin, LibraryBigIcon, Library } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 text-xl font-bold mb-4">
-              <BookOpen className="h-8 w-8 text-primary-400" />
+              <Library className="h-8 w-8 text-primary-400" />
               <span>LibraryMS</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
