@@ -16,6 +16,8 @@ import Books from './pages/Books'
 import BookDetail from './pages/BookDetail'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
+import NotFound from './pages/NotFound'
+
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminBooks from './pages/admin/AdminBooks'
 import AdminUsers from './pages/admin/AdminUsers'
@@ -31,6 +33,7 @@ function App() {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/books" element={<Books />} />
