@@ -2,9 +2,9 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || "/api", // fallback to /api for local dev
   timeout: 10000,
-})
+});
 
 // Request interceptor
 api.interceptors.request.use(
